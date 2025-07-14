@@ -3,9 +3,6 @@ services:
     name: pocketbase
     env: docker
     plan: free
-    autoDeploy: false
+    autoDeploy: true
     buildCommand: ""
-    startCommand: ./start.sh
-    envVars:
-      - key: PORT
-        value: 10000
+    startCommand: "./pocketbase serve --http=0.0.0.0:10000"
